@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&family=Varela+Round&display=swap');
+
+
+/* ==============================
+   BASIC RESET
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-color: antiquewhite;
+}
+
+
+/* ==============================
+   NAVBAR
+================================= */
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 65px;
+    color: white;
+    background-color: rgb(0, 0, 0);
+}
+
+
+nav ul li {
+    padding: 0 12px;
+}
+
+
+.brand {
+    display: flex;
+    align-items: center;
+    font-weight: 550;
+    font-size: 1.28rem;
+}
+
+
+.brand img {
+    padding: 0 8px;
+    width: 58px;
+}
+
+
+/* ==============================
+   MAIN CONTAINER
+================================= */
+
+.container {
+    background-image: url("assets/Porsche 911.jpg");
+    background-size: cover;
+    background-position: center;
+
+    height: 70vh;
+
+    background-color: black;
+    color: white;
+
+    font-family: 'Ubuntu', sans-serif;
+
+    display: flex;
+
+    margin: 23px auto;
+
+    width: 70%;
+
+    border-radius: 15px;
+
+    padding: 30px;
+
+    overflow: hidden;
+}
+
+
+.songlist {
+    height: 52vh;
+    width: 100%;
+}
+
+
+.songlist h1 {
+    font-size: 1.7rem;
+}
+
+
+/* ==============================
+   SONG CONTAINER
+================================= */
+
+.songitemcontainer {
+    height: 100%;
+
+    background-color: rgba(94, 92, 92, 0.359);
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    margin-top: 30px;
+
+    padding: 1vh;
+
+    border-radius: 34px 0 0 34px;
+}
+
+
+/* ==============================
+   SCROLLBAR
+================================= */
+
+.songitemcontainer::-webkit-scrollbar {
+    width: 4px;
+}
+
+
+.songitemcontainer::-webkit-scrollbar-track {
+    background: rgb(44, 44, 44);
+}
+
+
+.songitemcontainer::-webkit-scrollbar-thumb {
+    background: #818080;
+    border-radius: 10px;
+}
+
+
+.songitemcontainer::-webkit-scrollbar-thumb:hover {
+    background: #c2c1c1;
+}
+
+
+/* ==============================
+   SONG ITEM
+================================= */
+
+.songItem {
+    min-height: 50px;
+    width: 33vw;
+
+    display: flex;
+
+    color: #E3DDDD;
+
+    text-align: center;
+
+    justify-content: space-between;
+
+    gap: 2vw;
+
+    align-items: center;
+
+    border-radius: 25px;
+
+    margin: 12px 0;
+
+    background-color: rgba(232, 230, 230, 0.084);
+
+    box-shadow:
+        inset 6px 7px 7px -1px #d6d5d5c1;
+
+    border-bottom: 1px solid #9b9898;
+    border-right: 1px solid #9b9898;
+
+    transition:
+        transform 0.15s ease-in-out,
+        box-shadow 0.15s ease-in-out,
+        background-color 0.15s ease-in-out;
+}
+
+
+/* Desktop hover */
+
+.songItem:hover {
+    background-color: rgba(232, 230, 230, 0.084);
+
+    border-bottom: 1px solid #9b9898;
+    border-right: 1px solid #9b9898;
+
+    transform: scale(1.02);
+
+    box-shadow:
+        inset 6px 7px 7px -1px #d6d5d5c1,
+        0 3px 10px -1px purple;
+}
+
+
+/* ==============================
+   SONG IMAGE
+================================= */
+
+.songItem img {
+    height: 43px;
+    width: 43px;
+
+    object-fit: cover;
+    object-position: center;
+
+    margin: 0 5px;
+
+    border: 1px solid rgb(0, 0, 0);
+
+    border-radius: 50% 0 0 50%;
+}
+
+
+/* ==============================
+   SONG NAME
+================================= */
+
+.songName {
+    font-size: 15px;
+
+    text-align: center;
+
+    margin-left: 0;
+
+    color: black;
+
+    font-weight: 400;
+
+    cursor: context-menu;
+
+    flex: 1;
+}
+
+
+/* ==============================
+   TIMESTAMP
+================================= */
+
+.timestamp {
+    margin: 0 23px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: context-menu;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    box-shadow:
+        inset 5px 7px 5px -3px rgb(43, 43, 43);
+
+    text-align: center;
+
+    transition:
+        all 0.10s ease-out;
+
+    padding: 3px 10px;
+
+    height: 40px;
+
+    border-radius: 20px;
+}
+
+
+.timestamp:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+
+    box-shadow:
+        inset -5px -5px 5px -5px #e0dfdf;
+}
+
+
+/* ==============================
+   SMALL PLAY BUTTON
+================================= */
+
+.timestamp i {
+    cursor: pointer;
+
+    width: 32px;
+
+    text-align: center;
+
+    font-size: 25px;
+
+    transition:
+        transform 0.1s ease,
+        color 0.1s ease;
+}
+
+
+/* ==============================
+   BOTTOM PLAYER
+================================= */
+
+.bottom {
+    position: sticky;
+
+    height: 90px;
+
+    background-color: black;
+
+    color: white;
+
+    bottom: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* ==============================
+   PROGRESS BAR
+================================= */
+
+#myprogressbar {
+    width: 80%;
+
+    height: 2px;
+
+    cursor: pointer;
+
+    scroll-behavior: smooth;
+}
+
+
+/* ==============================
+   PLAYER ICONS
+================================= */
+
+.icons {
+    margin-top: 14px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 2vw;
+}
+
+
+.icons i {
+    font-size: 35px;
+
+    font-weight: 100;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.1s ease;
+}
+
+
+.icons i:active {
+    transform: scale(0.9);
+}
+
+
+/* ==============================
+   SONG INFO
+================================= */
+
+.songinfo {
+    font-family: 'Varela Round', sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    font-size: 13px;
+
+    align-items: center;
+
+    position: absolute;
+
+    left: 9.5vw;
+
+    max-width: 35vw;
+}
+
+
+.songinfo img {
+    height: 2px;
+
+    width: 100px;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        all 0.15s ease-in-out;
+}
+
+
+#masterSongName {
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==============================
+   MOBILE
+================================= */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        height: 60px;
+    }
+
+
+    .brand {
+        font-size: 1.1rem;
+    }
+
+
+    .brand img {
+        width: 48px;
+        padding: 0 6px;
+    }
+
+
+    nav ul li {
+        padding: 0 8px;
+    }
+
+
+    .container {
+        width: 94%;
+
+        height: 70vh;
+
+        margin: 18px auto;
+
+        padding: 18px;
+
+        border-radius: 15px;
+
+        display: block;
+    }
+
+
+    .songlist {
+        height: 100%;
+    }
+
+
+    .songlist h1 {
+        font-size: 1.25rem;
+
+        line-height: 1.3;
+    }
+
+
+    .songitemcontainer {
+        margin-top: 20px;
+
+        padding: 8px;
+
+        border-radius: 25px 0 0 25px;
+    }
+
+
+    .songItem {
+        width: 100%;
+
+        min-height: 50px;
+
+        gap: 8px;
+
+        margin: 10px 0;
+
+        border-radius: 25px;
+    }
+
+
+    .songItem img {
+        height: 40px;
+        width: 40px;
+    }
+
+
+    .songName {
+        font-size: 12px;
+
+        line-height: 1.2;
+
+        min-width: 0;
+    }
+
+
+    .timestamp {
+        margin: 0 8px;
+
+        height: 36px;
+
+        padding: 3px 7px;
+
+        gap: 4px;
+    }
+
+
+    .timestamp i {
+        width: 27px;
+
+        font-size: 23px;
+    }
+
+
+    .bottom {
+        height: 100px;
+    }
+
+
+    #myprogressbar {
+        width: 90%;
+    }
+
+
+    .icons {
+        gap: 28px;
+
+        margin-top: 12px;
+    }
+
+
+    .icons i {
+        font-size: 32px;
+    }
+
+
+    .songinfo {
+        position: static;
+
+        max-width: 90%;
+
+        margin-top: 4px;
+
+        font-size: 11px;
+    }
+
+
+    .songinfo img {
+        width: 65px;
+    }
+
+}
+
+
+/* ==============================
+   SMALL PHONES
+================================= */
+
+@media (max-width: 430px) {
+
+    .container {
+        width: 96%;
+
+        padding: 14px;
+    }
+
+
+    .songlist h1 {
+        font-size: 1.05rem;
+    }
+
+
+    .songItem {
+        min-height: 48px;
+
+        gap: 4px;
+    }
+
+
+    .songItem img {
+        height: 37px;
+        width: 37px;
+    }
+
+
+    .songName {
+        font-size: 11px;
+    }
+
+
+    .timestamp {
+        margin: 0 5px;
+
+        height: 34px;
+
+        padding: 2px 5px;
+    }
+
+
+    .timestamp i {
+        font-size: 21px;
+
+        width: 24px;
+    }
+
+
+    .icons {
+        gap: 24px;
+    }
+
+
+    .icons i {
+        font-size: 29px;
+    }
+
+}
+
+
+/* ==============================
+   TOUCH DEVICES
+   REMOVE HOVER EFFECTS
+================================= */
+
+@media (hover: none) {
+
+    .songItem:hover {
+        background-color: rgba(232, 230, 230, 0.084);
+
+        border-bottom: 1px solid #9b9898;
+        border-right: 1px solid #9b9898;
+
+        transform: none;
+
+        box-shadow:
+            inset 6px 7px 7px -1px #d6d5d5c1;
+    }
+
+
+    .timestamp:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+
+        box-shadow:
+            inset 5px 7px 5px -3px rgb(43, 43, 43);
+    }
+
+
+    .songItem:active {
+        transform: scale(0.98);
+
+        box-shadow:
+            inset 6px 7px 7px -1px #d6d5d5c1,
+            0 2px 8px -1px purple;
+    }
+
+
+    .timestamp:active {
+        transform: scale(0.95);
+    }
+
+
+    .timestamp i:active {
+        transform: scale(0.85);
+    }
+
+}

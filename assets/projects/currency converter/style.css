@@ -1,0 +1,651 @@
+/* =========================================
+   CURRENCY CONVERTER — PREMIUM UI
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+
+    font-family: "Inter", sans-serif;
+
+    background:
+        radial-gradient(circle at 15% 15%,
+            rgba(37, 99, 235, 0.25),
+            transparent 30%),
+        radial-gradient(circle at 85% 85%,
+            rgba(6, 182, 212, 0.18),
+            transparent 30%),
+        #070b16;
+
+    overflow: hidden;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   BACKGROUND GLOW
+========================================= */
+
+body::before,
+body::after {
+    content: "";
+
+    position: fixed;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    filter: blur(100px);
+
+    pointer-events: none;
+
+    opacity: 0.35;
+}
+
+body::before {
+    background: #2563eb;
+
+    top: -150px;
+    left: -100px;
+}
+
+body::after {
+    background: #06b6d4;
+
+    bottom: -150px;
+    right: -100px;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.container {
+    position: relative;
+
+    width: 100%;
+    max-width: 430px;
+
+    padding: 34px;
+
+    border-radius: 26px;
+
+    background:
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.10),
+            rgba(255, 255, 255, 0.035));
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+
+    animation: cardIn 0.7s cubic-bezier(.16, 1, .3, 1);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.container:hover {
+    /* transform: translateY(-2px); */
+
+    box-shadow:
+        0 40px 90px rgba(0, 0, 0, 0.55),
+        0 0 40px rgba(37, 99, 235, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================
+   TOP DECORATIVE LINE
+========================================= */
+
+.container::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 80px;
+    height: 3px;
+
+    transform: translateX(-50%);
+
+    background: linear-gradient(90deg,
+            #2563eb,
+            #06b6d4);
+
+    border-radius: 0 0 10px 10px;
+
+    box-shadow:
+        0 0 18px rgba(37, 99, 235, 0.7);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.container h2 {
+    text-align: center;
+
+    margin-bottom: 32px;
+
+    font-size: 27px;
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+
+    color: #ffffff;
+}
+
+.container h2::after {
+    content: "Exchange currencies instantly";
+
+    display: block;
+
+    margin-top: 8px;
+
+    font-size: 11px;
+    font-weight: 500;
+
+    letter-spacing: 0.4px;
+
+    color: #7f8da8;
+}
+
+
+/* =========================================
+   LABELS
+========================================= */
+
+.amt p,
+.from p,
+.to p {
+    margin-bottom: 9px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 0.4px;
+
+    text-transform: uppercase;
+
+    color: #8996ae;
+}
+
+
+/* =========================================
+   AMOUNT INPUT
+========================================= */
+
+.amt input {
+    width: 100%;
+    height: 54px;
+
+    padding: 0 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 13px;
+
+    outline: none;
+
+    background: rgba(4, 9, 20, 0.65);
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    transition:
+        border 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.amt input:hover {
+    border-color: rgba(37, 99, 235, 0.45);
+
+    background: rgba(4, 9, 20, 0.8);
+}
+
+.amt input:focus {
+    border-color: #3b82f6;
+
+    background: rgba(4, 9, 20, 0.9);
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.12),
+        0 0 25px rgba(37, 99, 235, 0.08);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================
+   DROPDOWN AREA
+========================================= */
+
+.dropdown {
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+.from,
+.to {
+    flex: 1;
+}
+
+
+/* =========================================
+   SELECT BOX
+========================================= */
+
+.select-container {
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 12px;
+
+    border-radius: 13px;
+
+    background: rgba(4, 9, 20, 0.65);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    transition:
+        border 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.25s ease;
+}
+
+.select-container:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(37, 99, 235, 0.45);
+
+    background: rgba(4, 9, 20, 0.85);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.select-container:focus-within {
+    border-color: #3b82f6;
+
+    box-shadow:
+        0 0 0 3px rgba(37, 99, 235, 0.10),
+        0 0 20px rgba(37, 99, 235, 0.08);
+}
+
+
+/* =========================================
+   FLAG
+========================================= */
+
+.select-container img {
+    width: 31px;
+    height: 22px;
+
+    object-fit: cover;
+
+    border-radius: 4px;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.35);
+
+    transition:
+        transform 0.3s ease,
+        filter 0.3s ease;
+}
+
+.select-container:hover img {
+    transform: scale(1.08);
+
+    filter: brightness(1.1);
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.select-container select {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, #64748b 50%),
+        linear-gradient(135deg, #64748b 50%, transparent 50%);
+
+    background-position:
+        calc(100% - 7px) 50%,
+        calc(100% - 2px) 50%;
+
+    background-size:
+        5px 5px,
+        5px 5px;
+
+    background-repeat: no-repeat;
+}
+
+
+/* Dropdown options */
+
+.select-container select option {
+    background: #0b1220;
+    padding: 1rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+/* =========================================
+   SWAP BUTTON
+========================================= */
+
+.dropdown>i {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 6px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(145deg,
+            #1d4ed8,
+            #2563eb);
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 20px rgba(37, 99, 235, 0.30);
+
+    transition:
+        transform 0.45s cubic-bezier(.16, 1, .3, 1),
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+
+
+/* =========================================
+   RESULT MESSAGE
+========================================= */
+
+.finalMsg {
+    position: relative;
+
+    margin-top: 27px;
+
+    padding: 17px;
+
+    text-align: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(135deg,
+            rgba(37, 99, 235, 0.10),
+            rgba(6, 182, 212, 0.06));
+
+    border: 1px solid rgba(59, 130, 246, 0.18);
+
+    color: #dbeafe;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
+
+    transition:
+        transform 0.3s ease,
+        border 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.finalMsg:hover {
+    transform: translateY(-2px);
+
+    border-color: rgba(59, 130, 246, 0.35);
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+form>button {
+    position: relative;
+
+    width: 100%;
+    height: 54px;
+
+    margin-top: 17px;
+
+    border: none;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(100deg,
+            #2563eb,
+            #3b82f6,
+            #06b6d4);
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 30px rgba(37, 99, 235, 0.30);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* Button shine */
+
+form>button::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 70%;
+    height: 100%;
+
+    background:
+        linear-gradient(90deg,
+            transparent,
+            rgba(255, 255, 255, 0.20),
+            transparent);
+
+    transform: skewX(-20deg);
+
+    transition: left 0.6s ease;
+}
+
+form>button:hover::before {
+    left: 140%;
+}
+
+form>button:hover {
+    transform: translateY(-3px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 15px 35px rgba(37, 99, 235, 0.40);
+}
+
+form>button:active {
+    transform: translateY(0) scale(0.98);
+
+    box-shadow:
+        0 6px 18px rgba(37, 99, 235, 0.25);
+}
+
+
+/* =========================================
+   CARD ENTRY ANIMATION
+========================================= */
+
+@keyframes cardIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(35px) scale(0.94);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0) scale(1);
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .container {
+        padding: 28px 21px;
+
+        border-radius: 22px;
+    }
+
+    .container h2 {
+        font-size: 24px;
+    }
+
+    .dropdown {
+        gap: 7px;
+    }
+
+    .dropdown>i {
+        width: 37px;
+        height: 37px;
+
+        font-size: 12px;
+    }
+
+    .select-container {
+        padding: 0 9px;
+    }
+
+    .select-container img {
+        width: 27px;
+        height: 20px;
+    }
+
+    .select-container select {
+        font-size: 13px;
+    }
+}

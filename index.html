@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/image copy.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="body">
+        <div class="hero">
+            <!-- --------------------------Nav-Bar-------------------------- -->
+
+
+
+            <div class="nav-bar" id="home">
+
+                <div class="logo">&lt;BL/&gt;</div>
+
+                <div class="nav-list">
+                    <ul>
+                        <li><a class="nav-buttons" href="#home">Home</a></li>
+                        <li><a class="nav-buttons" href="#projectSec">Projects</a></li>
+                        <li><a class="nav-buttons" href="#contact">Contact</a></li>
+                        <li><a class="nav-buttons" href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- =========================================== -->
+
+            <!----------page-1--------->
+
+            <div class="main-content-of-hero">
+                <!-- --------------------------Left-Box-------------------------- -->
+
+                <div class="left">
+
+                    <div class="left-heading">
+                        <p>Hi i'm <span>BHART</span>,</p>
+                    </div>
+                    <div class="left-heading-intro">
+                        <p>The Full-Stack Developer</p>
+                    </div>
+
+                    <div class="left-para">
+                        <p>
+                            I transform ideas into <span>modern</span>, <span>responsive</span>, and
+                            <span>high-performance</span> websites that leave a lasting
+                            impression.
+                        </p>
+                    </div>
+
+                    <div class="buttons">
+                        <a href="#projectSec">View Project</a>
+                        <a href="#contact">Contact Me</a>
+                    </div>
+
+                </div>
+
+                <!-- --------------------------Right-Box-------------------------- -->
+
+                <div class="right">
+
+                    <div class="photo">
+                        <img src="assets/image.png" alt="" width="800">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- ========================================================= -->
+        <!------------------page - 2------------------>
+
+
+
+        <div class="projectSection">
+
+            <div class="nav-bar" id="projectSec">
+
+                <div class="logo">&lt;BL/&gt;</div>
+
+                <div class="nav-list">
+                    <ul>
+                        <li><a class="nav-buttons" href="#home">Home</a></li>
+                        <li><a class="nav-buttons" href="#projectSec">Projects</a></li>
+                        <li><a class="nav-buttons" href="#contact">Contact</a></li>
+                        <li><a class="nav-buttons" href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div>
+                <h1>Projects</h1>
+                <div class="projectItemContainer"></div>
+            </div>
+
+        </div>
+
+        <!-- =========================================== -->
+
+        <!-------------Page-3 ----------->
+
+
+        <div class="contactForm" id="contact">
+
+            <div class="nav-bar" id="home">
+
+                <div class="logo">&lt;BL/&gt;</div>
+
+                <div class="nav-list">
+                    <ul>
+                        <li><a class="nav-buttons" href="#home">Home</a></li>
+                        <li><a class="nav-buttons" href="#projectSec">Projects</a></li>
+                        <li><a class="nav-buttons" href="#contact">Contact</a></li>
+                        <li><a class="nav-buttons" href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="formSec">
+                <div class="leftForm">
+                    <h1>Contact</h1>
+
+                    <div class="leftFormImg">
+                        <img src="assets/undraw_complete-form_aarh.svg" alt="">
+                    </div>
+                </div>
+
+                <div class="rightForm">
+
+                    <form action="#">
+
+                        <div class="name">
+
+                            <label for="fName">First Name </label><input placeholder="First Name" required type="text"
+                                id="fName">
+
+                            <label for="lName">Last Name </label><input placeholder="Last Name (OPTIONAL)" type="text"
+                                id="lName">
+
+                            <label for="whichProject">Project Type</label><select required name="projectSelect"
+                                id="whichProject" id="projectSelect">
+                                <option value="" selected>Select</option>
+                                <option value="">Website Development</option>
+                                <option value="">Landing Page</option>
+                                <option value="">Frontend Development</option>
+                                <option value="">Full-Stack Project</option>
+                                <option value="">Collaboration</option>
+                                <option value="">Others</option>
+                            </select>
+
+                        </div>
+
+
+                        <label for="phone">Phone No.</label>
+                        <input placeholder="Mobile No" type="number" required name="phone" id="phone">
+
+                        <label for="email">E-mail </label><input placeholder="Enter Valid Email-Id" type="email"
+                            required name="email" id="email">
+
+                        <label for="DOB">Date of Birth</label> <input required type="date" id="DOB">
+
+                        <label for="budget">Budget </label><select required name="projectSelect" id="budget">
+                            <option value="" selected>Select</option>
+                            <option value="">Basic : ₹5k - ₹10k</option>
+                            <option value="">Intermidiate : ₹10k - ₹25k</option>
+                            <option value="">Advanced : ₹25k - ₹50k</option>
+                            <option value="">super Advanced : ₹50k+</option>
+                            <option value="">Not decided</option>
+                        </select>
+
+
+
+                        <label for="message">Tell me about <br> your project... </label> <input id="message"
+                            type="textarea" placeholder="Ask">
+
+
+                        <button type="submit">Let's Talk </button>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- page 4 -->
+        <!-- about -->
+
+
+        <section class="aboutSec">
+
+            <div class="nav-bar" id="about">
+
+                <div class="logo">&lt;BL/&gt;</div>
+
+                <div class="nav-list">
+                    <ul>
+                        <li><a class="nav-buttons" href="#home">Home</a></li>
+                        <li><a class="nav-buttons" href="#projectSec">Projects</a></li>
+                        <li><a class="nav-buttons" href="#contact">Contact</a></li>
+                        <li><a class="nav-buttons" href="#about">About</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="aboutHeading">
+                <h1>About Me</h1>
+                <p>Get to know me and my journey as a developer.</p>
+            </div>
+
+
+            <div class="aboutAccordion">
+
+                <!-- QUESTION 1 -->
+                <div class="aboutItem">
+
+                    <div class="questionBox">
+                        <h2>Who am I?</h2>
+
+                        <span class="plusIcon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </div>
+
+                    <div class="answerBox">
+                        <p>
+                            I'm a passionate web developer who enjoys turning ideas
+                            into modern, interactive and user-friendly websites.
+                            I love learning new technologies and improving my skills
+                            by building real-world projects.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION 2 -->
+                <div class="aboutItem">
+
+                    <div class="questionBox">
+                        <h2>What do I do?</h2>
+
+                        <span class="plusIcon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </div>
+
+                    <div class="answerBox">
+                        <p>
+                            I build responsive websites and web applications using
+                            HTML, CSS and JavaScript. I'm also working towards
+                            becoming a full-stack developer.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION 3 -->
+                <div class="aboutItem">
+
+                    <div class="questionBox">
+                        <h2>What technologies do I use?</h2>
+
+                        <span class="plusIcon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </div>
+
+                    <div class="answerBox">
+                        <p>
+                            My current focus is on HTML, CSS and JavaScript.
+                            I'm gradually moving towards technologies such as
+                            Node.js, Express.js, APIs and modern frontend tools.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION 4 -->
+                <div class="aboutItem">
+
+                    <div class="questionBox">
+                        <h2>What am I currently learning?</h2>
+
+                        <span class="plusIcon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </div>
+
+                    <div class="answerBox">
+                        <p>
+                            I'm currently improving my JavaScript skills and
+                            exploring full-stack development by creating projects
+                            and solving practical problems.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <!-- QUESTION 5 -->
+                <div class="aboutItem">
+
+                    <div class="questionBox">
+                        <h2>What is my goal?</h2>
+
+                        <span class="plusIcon">
+                            <i class="fa-solid fa-plus"></i>
+                        </span>
+                    </div>
+
+                    <div class="answerBox">
+                        <p>
+                            My goal is to become a skilled full-stack developer,
+                            work on meaningful projects and eventually build
+                            products of my own.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <div class="cursor"></div>
+
+
+    </div>
+
+    <!--==================================== -->
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

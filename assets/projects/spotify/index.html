@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spotify - Your favourite music is here</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="brand">
+                <img src="assets/spotify-logo.png" alt="Spotify">
+                Spotify
+            </li>
+
+            <li>Home</li>
+            <li>About</li>
+        </ul>
+    </nav>
+
+
+    <div class="container">
+
+        <div class="songlist">
+
+            <h1>Best of NCS - No Copyright Sounds</h1>
+
+            <div class="songitemcontainer" id="songItemContainer">
+                <!-- Songs will be added automatically by JavaScript -->
+            </div>
+
+        </div>
+
+        <div class="songbanner"></div>
+
+    </div>
+
+
+    <div class="bottom">
+
+        <input
+            type="range"
+            name="range"
+            min="0"
+            max="100"
+            value="0"
+            id="myprogressbar"
+        >
+
+
+        <div class="icons">
+
+            <!-- Previous -->
+            <i id="previous" class="ri-rewind-fill"></i>
+
+            <!-- Play / Pause -->
+            <i id="masterPlay" class="ri-play-circle-fill"></i>
+
+            <!-- Next -->
+            <i id="next" class="ri-speed-fill"></i>
+
+        </div>
+
+
+        <div class="songinfo">
+
+            <img
+                id="gif"
+                src="assets/sound waves.gif"
+                alt="Sound waves"
+            >
+
+            <span id="masterSongName"></span>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

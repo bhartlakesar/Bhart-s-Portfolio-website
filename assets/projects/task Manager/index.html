@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Task Manager</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/3666f8a4fd.js" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Engagement&family=Fira+Sans:ital,wght@0,100..900;1,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Noto+Sans+Old+North+Arabian&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Grotesk:wght@300..700&family=Ubuntu:wght@400;500&family=Varela+Round&display=swap"
+        rel="stylesheet">
+
+    <!-- Remix Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+
+    <div class="nav">
+
+        <div class="leftNav">
+
+            <ul>
+
+                <li>
+                    <a href="#" title="logo" class="logo">
+                        {TaskFlow}
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Home
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="rightNav">
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        <i class="ri-add-circle-line addTask"> Add Task</i>
+                    </a>
+                </li>
+
+                <li>
+
+                    <a href="#" title="Change Theme" class="mode">
+
+                        Dark Mode:
+
+                        <span class="out">
+                            <span class="in"></span>
+                        </span>
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- Hero -->
+
+    <div class="hero">
+
+        <h1>
+            Plan Less. Do More.
+        </h1>
+
+        <p>
+            Organize your tasks, stay focused, and keep moving forward with TaskFlow.
+        </p>
+
+    </div>
+
+
+    <!-- Task List -->
+
+    <div class="taskList">
+
+        <!-- Tasks will be added here using JavaScript -->
+
+    </div>
+
+
+    <!-- Add Task Popup -->
+
+    <div class="popup">
+
+        <h1>
+            Add New Task
+        </h1>
+
+        <input type="text" id="task" placeholder="Enter Your Task">
+
+        <div class="taskBtns">
+
+            <button class="cancelTaskBtn">
+                Cancel Task
+            </button>
+
+            <button class="addTaskBtn">
+                Add Task
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Background Blur -->
+
+    <div class="blurBg"></div>
+
+
+    <!-- JavaScript -->
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
